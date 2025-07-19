@@ -1,2 +1,2 @@
-# bspwm
-Rice for BSPWM
+# grimm-rice
+Rice for grimm-rice
