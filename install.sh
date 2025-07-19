@@ -3,7 +3,6 @@
 echo "[+] Instalando entorno minimalista con bspwm..."
 
 # 1. Instalar dependencias
-sudo apt update
 sudo apt install -y bspwm sxhkd rxvt-unicode rofi picom feh xorg xinit unzip
 
 # 2. Crear carpetas necesarias
@@ -25,10 +24,11 @@ echo "[+] Descargando fuentes..."
 while read -r url; do
     echo "Descargando: $url"
     wget -P /tmp/grimm-fonts "$url"
-done < ./fonts/fonts.list
 
-# Extraer todos los .zip descargados directamente en la misma carpeta
-unzip -qq '/tmp/grimm-fonts/*.zip' -d /tmp/grimm-fonts
+    # Extraer inmediatamente después de descargar
+    zip_file=$(ls -t /tmp/grimm-fonts/*.zip 2>/dev/null | head -n1)
+    [ -f "$zip_file" ] && unzip -qq "$zip_file" -d /tmp/grimm-fonts
+done < ./fonts/fonts.list
 
 # 5. Mover las fuentes instaladas
 find /tmp/grimm-fonts -iname "*.ttf" -exec cp {} ~/.fonts/ \;
