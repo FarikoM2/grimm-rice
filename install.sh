@@ -11,6 +11,7 @@ mkdir -p ~/.config/bspwm ~/.config/sxhkd ~/.config
 mkdir -p ~/.fonts
 mkdir -p ~/wallpapers
 mkdir -p /tmp/grimm-fonts
+mkdir -p /tmp/grimm-fonts/unpacked
 
 # 3. Copiar configuraciones
 cp ./config/bspwmrc ~/.config/bspwm/bspwmrc
