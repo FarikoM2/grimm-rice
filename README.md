@@ -1,0 +1,2 @@
+# bspwm
+Rice for BSPWM
