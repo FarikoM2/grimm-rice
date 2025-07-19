@@ -23,9 +23,17 @@ cp ./wallpapers/* ~/wallpapers/
 # 4. Descargar e instalar fuentes desde fonts.list
 echo "[+] Descargando fuentes..."
 while read -r url; do
-    filename=$(basename "$url")
-    wget -q --show-progress -O /tmp/grimm-fonts/"$filename" "$url"
-    unzip -qq /tmp/grimm-fonts/"$filename" -d /tmp/grimm-fonts/unpacked
+    echo "Descargando: $url"
+    wget --content-disposition --trust-server-names -P /tmp/grimm-fonts "$url"
+
+    # Extraer el archivo más reciente descargado
+    last_zip=$(find /tmp/grimm-fonts -name "*.zip" -type f -printf "%T@ %p\n" | sort -n | tail -1 | cut -d' ' -f2-)
+
+    if file "$last_zip" | grep -q "Zip archive data"; then
+        unzip -qq "$last_zip" -d /tmp/grimm-fonts/unpacked
+    else
+        echo "[!] Error: $last_zip no es un archivo ZIP válido."
+    fi
 done < ./fonts/fonts.list
 
 # 5. Mover las fuentes instaladas
