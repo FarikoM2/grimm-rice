@@ -1,13 +1,12 @@
 #!/bin/sh
 
-# Init
-#xrdb -merge ~/.Xresources
-sxhkd &                                 # Atajos de teclado
-#picom --config ~/.config/picom.conf &   # Compositor (transparencias)
-#feh --bg-scale ~/wallpapers/0002.png &  # Fondo de pantalla
+xrdb -merge ~/.Xresources
+sxhkd &
+#picom --config ~/.config/picom.conf &
+feh --bg-scale ~/wallpapers/0002.png &
 
 # Configuración básica del entorno
-#bspc monitor -d I II III IV V
+# bspc monitor -d I II III IV V
 
 # Comportamiento de las ventanas
 # bspc config border_width         2
