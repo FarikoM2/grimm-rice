@@ -3,7 +3,7 @@
 echo "[+] Instalando entorno minimalista con bspwm..."
 
 # 1. Instalar dependencias
-sudo apt install -y bspwm sxhkd rxvt-unicode rofi picom feh xorg xinit unzip
+sudo apt install -y bspwm sxhkd rxvt-unicode rofi picom feh xorg xinit x11-xserver-utils unzip nano
 
 # 2. Crear carpetas necesarias
 mkdir -p ~/.config/bspwm ~/.config/sxhkd ~/.config/picom
