@@ -2,17 +2,17 @@
 
 xrdb -merge ~/.Xresources
 sxhkd &
-#picom --config ~/.config/picom.conf &
+picom --config ~/.config/picom/picom.conf &
 feh --bg-scale ~/wallpapers/0002.png &
 
-# Configuración básica del entorno
-# bspc monitor -d I II III IV V
+Configuración básica del entorno
+bspc monitor -d I II III IV V
 
-# Comportamiento de las ventanas
-# bspc config border_width         2
-# bspc config window_gap           6
-# bspc config split_ratio          0.5
-# bspc config borderless_monocle  true
-# bspc config gapless_monocle     true
-# bspc config focus_follows_pointer true
-# bspc config click_to_focus       true
+Comportamiento de las ventanas
+bspc config border_width         2
+bspc config window_gap           6
+bspc config split_ratio          0.5
+bspc config borderless_monocle  true
+bspc config gapless_monocle     true
+bspc config focus_follows_pointer true
+bspc config click_to_focus       true
