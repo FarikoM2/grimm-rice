@@ -1,0 +1,118 @@
+! Xft configuration for better font rendering
+Xft.antialias:	1
+Xft.hinting:	1
+Xft.autohint:	0
+Xft.hintstyle:	hintslight
+Xft.rgba:	rgb
+Xft.lcdfilter:	lcddefault
+
+! ST configuration
+st.borderpx: 20
+st.alpha: 1.0
+st.font: JetBrainsMono Nerd Font:style:medium:pixelsize=13
+
+!-- decay palette definitions --!
+#define decay_darker_bg   #0e1217
+#define decay_bg          #101419
+#define decay_contrast_bg #15191e
+#define decay_lighter_bg  #1a1e23
+#define decay_fg          #b6beca
+#define decay_cursor      #b6beca
+
+#define decay_black         #242931
+#define decay_light_black   #485263
+#define decay_red           #e05f65
+#define decay_green         #76b97f
+#define decay_yellow        #f1cf8a
+#define decay_orange        #e9a180
+#define decay_darker_blue   #4e88d4
+#define decay_contrast_blue #5f94da
+#define decay_blue          #70a5eb
+#define decay_aquamarine    #7ddac5
+#define decay_magenta       #c68aee
+#define decay_cyan          #74bee9
+#define decay_white         #dee1e6
+
+! Global color configuration (for all terminals)
+*.foreground:   decay_fg
+*.background:   decay_bg
+*.cursorColor:  decay_cursor
+*fading: 35
+
+*.color0: decay_black
+*.color1: decay_red
+*.color2: decay_green
+*.color3: decay_yellow
+*.color4: decay_blue
+*.color5: decay_magenta
+*.color6: decay_cyan
+*.color7: decay_white
+
+*.color8: decay_light_black
+*.color9: decay_red
+*.color10: decay_green
+*.color11: decay_yellow
+*.color12: decay_blue
+*.color13: decay_magenta
+*.color14: decay_cyan
+*.color15: decay_white
+
+! URxvt specific configuration (your original settings)
+! special
+URxvt.background: #101419
+URxvt.foreground: #b6beca
+URxvt.cursorColor: #b6beca
+
+! black
+URxvt.color0: #242931
+URxvt.color8: #485263
+
+! red
+URxvt.color1: #e05f65
+URxvt.color9: #e05f65
+
+! green - using your custom green
+URxvt.color2: #94f7c5
+URxvt.color10: #94f7c5
+
+! yellow
+URxvt.color3: #f1cf8a
+URxvt.color11: #f1cf8a
+
+! blue
+URxvt.color4: #70a5eb
+URxvt.color12: #70a5eb
+
+! magenta
+URxvt.color5: #c68aee
+URxvt.color13: #c68aee
+
+! cyan
+URxvt.color6: #74bee9
+URxvt.color14: #74bee9
+
+! white
+URxvt.color7: #dee1e6
+URxvt.color15: #dee1e6
+
+!! URxvt Appearance (your original settings)
+URxvt.letterSpace: 0
+URxvt.lineSpace: 0
+URxvt.geometry: 92x24
+URxvt.internalBorder: 24
+URxvt.cursorBlink: true
+URxvt.cursorUnderline: false
+URxvt.saveline: 2048
+URxvt.scrollBar: false
+URxvt.scrollBar_right: false
+URxvt.urgentOnBell: true
+URxvt.depth: 24
+URxvt.iso14755: false
+
+! Fonts and size (your original settings)
+URxvt.locale: en_US.UTF-8
+URxvt.font: xft:JetBrainsMono Nerd Font:style=Regular:size=13:antialias=true:autohint=true
+URxvt.boldFont: xft:JetBrainsMono Nerd Font:style=Bold:size=13:antialias=true:autohint=true
+URxvt.italicFont: xft:JetBrainsMono Nerd Font:style=Italic:size=13:antialias=true:autohint=true
+URxvt.boldItalicFont: xft:JetBrainsMono Nerd Font:style=Bold Italic:size=13:antialias=true:autohint=true
+URxvt.skipBuiltinGlyphs: true
