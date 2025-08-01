@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# Init
+xrdb -merge ~/.Xresources
+sxhkd &
+picom -b &
+feh --bg-scale ~/wallpapers/0002.png &
+polybar grimm &
+
+# Configuración básica
+bspc config border_width 2
+bspc config window_gap 10
+bspc config split_ratio 0.50
+
+# Configuración de comportamiento
+bspc config click_to_focus       button1
+bspc config focus_follows_pointer true
+bspc config borderless_monocle  true
+bspc config gapless_monocle     true
+
+# Escritorios
+bspc monitor -d I II III IV V

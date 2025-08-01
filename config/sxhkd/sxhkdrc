@@ -1,0 +1,27 @@
+# BSPC
+
+# Cerrar ventana
+super + q
+    bspc node -c
+
+# Mover foco y ventana
+super + {_,shift + }{Left,Down,Up,Right}
+	bspc node -{f,s} {west,south,north,east}
+
+# Modo flotante
+super + f
+    bspc node -t floating
+
+# Reiniciar bspwm y recargar sxhkd
+super + shift + r
+   bspc wm -r; pkill -USR1 -x sxhkd
+
+# Applications
+
+# Terminal
+super + Return
+    urxvt
+
+# Rofi
+super + d
+    rofi -show drun
